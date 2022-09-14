@@ -1,25 +1,22 @@
-import React from 'react';
-
+import * as React from 'react';
+import manaJSON from './mana.json';
 import '../css/App.css';
+import { ManaObject, ManaColor } from './Models/Mana';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface IState {
+  manaArray: ManaObject[];
+}
+// let greenMana = manaArray.find(item => item.type == ManaColor.GREEN);
+
+class App extends React.PureComponent {
+
+  render() {
+    return (
+      <div>
+        <h1>Hello!</h1>
+      </div>
+    )
+  }
 }
 
 export default App;

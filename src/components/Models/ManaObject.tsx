@@ -6,8 +6,8 @@ export enum ManaColor {
   GREEN = 'green'
 }
 
-export interface ManaObject {
-  color: ManaColor,
+export interface ManaObj {
+  type: ManaColor,
   image: string,
   colorCode: string,
   count: number,

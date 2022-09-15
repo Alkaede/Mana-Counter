@@ -1,60 +1,31 @@
 import * as React from 'react';
-import manaJSON from './mana.json';
 import '../css/App.css';
-import { ManaObj, ManaColor } from './Models/ManaObject';
+import { ManaCounter } from './ManaCounter';
+import { ManaColor, ManaInfo } from './Models/Mana';
 
-// interface IState {
-//   manaArray: ManaObj[];
-// }
-
-// const manaAtt = (manas: IState[]) => {
-//   for (let mana of manas) {
-//     if (mana.hasOwnProperty('color')) {
-//       let greenMana = mana.manaArray.find(item => item.type === ManaColor.GREEN);
-//       console.log(greenMana);
-//     }
-//   }
-// }
-
-type MyState = {
-  count: number,
+interface IState {
+  manasInfo: ManaInfo[];
 }
 
-// console.log(ManaColor);
-// console.log(ManaObj.color)
+export class App extends React.PureComponent {
+
+  //pass in app manainfo object to manacounter props
+  // state fuckin done already up top smile:) in screenshots 
+  // component did mount with json data pars -> make an array of mana info -> populate to istate array in this line 
+  // for each manacounter -> stuff to find 
+  // getmanainfo returns manainfo object
 
 
-class App extends React.PureComponent {
-
-  state: MyState = {
-    count: 0,
-  }
-
-
-  increment = (amt: number) => {
-    this.setState(() => ({
-      count: this.state.count + amt,
-    }))
-  }
-
-  decrement = (amt: number) => {
-    this.setState(() => ({
-      count: this.state.count - amt,
-    }))
-  }
-
-
-  render() {
+  public render() {
     return (
-      <div>
-        <h1>Hello!</h1>
-        <button onClick={() => this.increment(1)}>--</button>
-        <h1>{this.state.count}</h1>
-        <button onClick={() => this.decrement(1)}>--</button>
-      </div>
-    )
+      <>
+        {/* make new compenent to house these */}
+        <ManaCounter manaColor={ManaColor.WHITE} manaInfo={this.getManaInfo(ManaColor.WHITE)} />
+        <ManaCounter manaColor={ManaColor.BLUE} />
+        <ManaCounter manaColor={ManaColor.BLACK} />
+        <ManaCounter manaColor={ManaColor.RED} />
+        <ManaCounter manaColor={ManaColor.GREEN} />
+      </>
+    );
   }
-
 }
-
-export default App;

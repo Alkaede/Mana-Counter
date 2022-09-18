@@ -3,11 +3,11 @@ export enum ManaColor {
   BLUE = 'blue',
   BLACK = 'black',
   RED = 'red',
-  GREEN = 'green'
+  GREEN = 'green',
 }
 
 export interface ManaInfo{
-  color: ManaColor,
+  mana: string,
   image: string,
-  //something ehere for color text :)
+  color: string,
 }

@@ -23,7 +23,6 @@ export class ManaCounter extends React.PureComponent<IProp, IState> {
   public render() {
     return (
       <div className="counter">
-        {/* <h1 className='counter_header'>{this.props.manaInfo.mana}</h1> */}
         <h1 className="counter_number">{this.state.manaCount}</h1>
         <img src={this.props.manaInfo.image} alt="" onClick={() => this.increment(1)} className="counter_image" />
         <button onClick={() => this.decrement(1)} className="counter_button">Remove</button>
@@ -38,6 +37,9 @@ export class ManaCounter extends React.PureComponent<IProp, IState> {
   }
 
   private decrement = (amount: number) => {
+    if (this.state.manaCount === 0)
+      return;
+
     this.setState(state => ({
       manaCount: state.manaCount - amount,
     }));

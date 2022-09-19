@@ -29,13 +29,11 @@ export class App extends React.PureComponent<{}, IState>{
 
       manaInfos.push(newObj);
     });
-    console.log(manaInfos, 'after pushing manainfos');
 
     await this.setState({
       manaInfos,
       loading: false,
     });
-    console.log(this.state.manaInfos, 'after set state')
   };
 
 

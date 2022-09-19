@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../css/App.css';
+import '../css/main.min.css';
 import { ManaInfo } from './Models/Mana';
 
 interface IState {
@@ -22,12 +22,11 @@ export class ManaCounter extends React.PureComponent<IProp, IState> {
 
   public render() {
     return (
-      <div>
-        <h1>{this.props.manaInfo.mana}</h1>
-        <h1>{this.state.manaCount}</h1>
-        <img src={this.props.manaInfo.image} alt="" onClick={() => this.increment(1)} />
-        {/* <button >++</button> */}
-        <button onClick={() => this.decrement(1)}>--</button>
+      <div className="counter">
+        {/* <h1 className='counter_header'>{this.props.manaInfo.mana}</h1> */}
+        <h1 className="counter_number">{this.state.manaCount}</h1>
+        <img src={this.props.manaInfo.image} alt="" onClick={() => this.increment(1)} className="counter_image" />
+        <button onClick={() => this.decrement(1)} className="counter_button">Remove</button>
       </div>
     )
   }

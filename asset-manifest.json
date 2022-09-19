@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Mana-Counter/static/css/main.7c9a9d9a.css",
-    "main.js": "/Mana-Counter/static/js/main.2f65506b.js",
+    "main.js": "/Mana-Counter/static/js/main.a2347cd0.js",
     "index.html": "/Mana-Counter/index.html",
     "main.7c9a9d9a.css.map": "/Mana-Counter/static/css/main.7c9a9d9a.css.map",
-    "main.2f65506b.js.map": "/Mana-Counter/static/js/main.2f65506b.js.map"
+    "main.a2347cd0.js.map": "/Mana-Counter/static/js/main.a2347cd0.js.map"
   },
   "entrypoints": [
     "static/css/main.7c9a9d9a.css",
-    "static/js/main.2f65506b.js"
+    "static/js/main.a2347cd0.js"
   ]
 }

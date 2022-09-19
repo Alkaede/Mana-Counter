@@ -1,0 +1,44 @@
+.component_container{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 6rem;
+}
+
+.counter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 5px 2px 5px black;
+
+  .counter_number{
+    font-weight: 700;
+    font-size: 3em;
+    color: azure;
+  }
+
+  .counter_image{
+    margin-top: 10px;
+    margin-bottom: 1.8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 15vh;
+    width: 100%;
+    :hover{
+      cursor: crosshair;
+    }
+  }
+
+  .counter_button {
+    font-size: 1.5rem;
+    color: white;
+    background: black;
+    box-shadow: 2px 2px 5.6px black;
+  }
+  .counter_button:hover {
+    background: rgb(0,3,255);
+    background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+  }
+
+}
